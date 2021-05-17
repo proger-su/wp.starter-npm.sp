@@ -36,7 +36,6 @@ blockquote {
 }
 blockquote:before, blockquote:after {
 	content: '';
-	content: none;
 }
 del {
 	text-decoration: line-through;

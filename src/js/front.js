@@ -1,4 +1,4 @@
-var starter = {
+let starter = {
     init: function () {
 
     },
@@ -13,7 +13,7 @@ var starter = {
             }
 
             jQuery('div.wpcf7 > form').each(function () {
-                var $form = jQuery(this);
+                let $form = jQuery(this);
                 wpcf7.initForm($form);
 
                 if (wpcf7.cached) {
@@ -31,23 +31,25 @@ var starter = {
             });
         },
         eventsSubmit: function () {
-            jQuery('div.wpcf7').on('wpcf7beforesubmit', function (event) {
-                var $form = jQuery('form', event.target);
+            let $form = jQuery('div.wpcf7');
+
+            $form.on('wpcf7beforesubmit', function (event) {
+                let $form = jQuery('form', event.target);
                 $form.addClass('sending');
             });
 
-            jQuery('div.wpcf7').on('wpcf7submit', function (event) {
-                var $form = jQuery('form', event.target);
+            $form.on('wpcf7submit', function (event) {
+                let $form = jQuery('form', event.target);
                 $form.removeClass('sending');
             });
 
-            jQuery('div.wpcf7').on('wpcf7mailsent', function (event) {
-                var message = event.detail.apiResponse.message;
+            $form.on('wpcf7mailsent', function (event) {
+                let message = event.detail.apiResponse.message;
 
-                var $btn = jQuery('form input[type="submit"]', event.target);
+                let $btn = jQuery('form input[type="submit"]', event.target);
 
-                var val = $btn.val();
-                var fs = $btn.css('font-size');
+                let val = $btn.val();
+                let fs = $btn.css('font-size');
 
                 $btn.css('font-size', '13px');
                 $btn.val(message);
