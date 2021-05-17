@@ -1,0 +1,59 @@
+@mixin cover-bg($pos) {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: $pos;
+	background-repeat: no-repeat;
+}
+
+@mixin clear-fix() {
+    &:before {
+		box-sizing: border-box;
+		display: table;
+		content: " ";
+	}
+
+	&:after {
+		box-sizing: border-box;
+		display: table;
+		content: " ";
+		clear: both;
+	}
+}
+
+@mixin min-max-media($min, $max) {
+	@media (min-width: $min) and (max-width: $max)  {
+		@content;
+	}
+}
+
+@mixin max-width($size) {
+	@media (max-width: $size) {
+		@content;
+	}
+}
+
+@mixin min-width($size) {
+	@media (min-width: $size) {
+		@content;
+	}
+}
+
+@mixin max-height($size) {
+	@media (max-height: $size) {
+		@content;
+	}
+}
+
+@mixin tablet() {
+	@media (max-width: $tablet-max) {
+		@content;
+	}
+}
+
+@mixin mobile() {
+	@media (max-width: $mobile-max) {
+		@content;
+	}
+}
