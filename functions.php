@@ -30,7 +30,7 @@ function _action_starter_admin_enqueue_scripts() {
 	$admin_scripts = 'dist/js/admin.js';
 
 	wp_enqueue_style( 'starter-admin', get_theme_file_uri( $admin_styles ), array(), filemtime( get_theme_file_path( $admin_styles ) ) );
-	wp_enqueue_scripts( 'starter-admin', get_theme_file_uri( $admin_styles ), array(), filemtime( get_theme_file_path( $admin_scripts ) ), true );
+	wp_enqueue_script( 'starter-admin', get_theme_file_uri( $admin_styles ), array(), filemtime( get_theme_file_path( $admin_scripts ) ), true );
 }
 
 add_action( 'body_class', '_action_starter_body_class' );

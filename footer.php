@@ -1,7 +1,7 @@
 <?php
 wp_footer();
 
-include_once("static/img/icons.svg");
+include_once("src/img/icons.svg");
 ?>
 </body>
 </html>
