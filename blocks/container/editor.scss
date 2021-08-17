@@ -1,0 +1,24 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-starter-container {
+	padding: 15px;
+
+	border: 2px dashed #2095a363;
+}
+
+.is-selected .wp-block-starter-container {
+	border: 2px dashed #2095a3;
+}
+
+.admin-bar.post-type-lottery .edit-post-visual-editor>.block-editor__typewriter>div>.block-editor-writing-flow>.block-editor-writing-flow__click-redirect[aria-hidden="true"]{
+	height: auto;
+	min-height: 50px;
+}
+
+.admin-bar.post-type-lottery .metabox-location-normal .acf-checkbox-list {
+	columns: 3;
+}
